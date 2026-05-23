@@ -1,7 +1,9 @@
+import HeroHome from "@/components/home/HeroHome";
+
 export default function Home() {
   return (
     <main>
-      <p className="font-serif text-gold p-8">Sophistipets — scaffold ready.</p>
+      <HeroHome />
     </main>
   );
 }
