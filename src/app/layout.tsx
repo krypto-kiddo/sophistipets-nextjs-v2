@@ -3,6 +3,7 @@ import { Lora, Inter } from "next/font/google";
 import "./globals.css";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
         <AnnouncementBar />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
