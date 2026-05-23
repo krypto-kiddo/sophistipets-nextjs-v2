@@ -51,10 +51,8 @@ export default function Navbar() {
         {/* Mobile Hamburger */}
         <div className="flex md:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <button className="p-2 text-foreground" aria-label="Open menu">
+            <SheetTrigger className="p-2 text-foreground" aria-label="Open menu">
                 <Menu size={22} />
-              </button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-background w-72 p-0">
               <div className="flex flex-col h-full">
