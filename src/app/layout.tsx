@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lora, Inter } from "next/font/google";
 import "./globals.css";
+import AnnouncementBar from "@/components/layout/AnnouncementBar";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${lora.variable} ${inter.variable}`}>
       <body className="bg-background text-foreground font-sans antialiased">
+        <AnnouncementBar />
         {children}
       </body>
     </html>
