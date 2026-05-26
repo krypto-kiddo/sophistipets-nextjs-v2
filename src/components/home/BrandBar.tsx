@@ -22,7 +22,7 @@ const brands = [
 
 export default function BrandBar() {
   return (
-    <section className="w-full bg-background border-t border-border py-12 md:py-16">
+    <section className="w-full bg-background border-t border-border py-12 md:py-16 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 mb-6">
         <p className="text-xs font-sans font-semibold text-muted uppercase tracking-widest text-center">
           Trusted brands we stock
@@ -30,11 +30,12 @@ export default function BrandBar() {
       </div>
 
 {/* Marquee wrapper */}
-<div className="overflow-hidden w-full">
+<div className="overflow-hidden w-full max-w-full">
   <div
     className="flex gap-10 w-max"
     style={{
       animation: "marquee 20s linear infinite",
+      willChange: "transform",
     }}
     onMouseEnter={(e) => (e.currentTarget.style.animationPlayState = "paused")}
     onMouseLeave={(e) => (e.currentTarget.style.animationPlayState = "running")}
